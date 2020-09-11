@@ -1,0 +1,299 @@
+body {margin: 0px; padding: 0px; font-size: calc(8px + 0.5vw);}
+
+h2 {font-size: calc(12px + 0.5vw);}
+h3 {font-size: calc(16px + 0.5vw);}
+h4 {font-size: calc(12px + 0.5vw);}
+pre {
+    font-size: calc(12px + 0.5vw);
+}
+* {
+    box-sizing: border-box;
+}
+
+    #page-head {   
+                
+                   padding:15px 3%;
+                   display: flex;
+                   flex-wrap: nowrap;
+                   justify-content: left;
+                   text-align: center;
+                   text-transform: capitalize;
+                   color: grey; 
+                   
+                   font-family: verdana;
+                   }
+    
+    #page-head div {margin: 10px 30px;
+                    padding-bottom: 10px;}
+    #page-head div:after{
+        content: '';
+        display: block;
+        border-bottom: 5px solid grey;
+        transform: scale(0);
+        transition: transform 0.5s;
+    }
+    
+    #page-head div:hover:after{transform: scale(1)}
+    #page-head > div:first-child{font-weight: bold;margin-right: 70px;}
+    
+
+
+@media screen and (max-width: 930px){
+    
+#page-head {margin: 0px;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+           }
+     
+#page-head div{text-align: center}
+
+}
+
+@media screen and (max-width: 686px){
+    #page-head div {justify-content: left;
+                    text-align: left;}
+    
+    #page-head div:after {
+                          transform-origin: 0% 100%; 
+    }
+}
+#page-content {display: flex;
+               flex-wrap:nowrap;
+               justify-content: center;
+               align-self: flex-start;
+               padding-bottom: 100px;
+
+               }
+
+#page-profile {
+        width: 100%;
+        padding: 0px 20px;
+        font-family: verdana;
+        color: black;
+        opacity: 0.5;
+        transition: opacity 0.2s;
+        position: sticky;
+        top: 0;
+        text-align: center;
+        align-self: flex-start;
+       
+}
+
+
+@media screen and (max-width: 1242px){
+ 
+#page-content {display: flex;
+               flex-wrap: wrap;
+               flex-flow: column;
+               justify-content: center;
+           
+               }   
+    #page-profile {
+       width: 100%;
+        position: static;
+        opacity: 1;
+    }
+    
+    
+    
+}
+#page-profile:hover {
+    opacity: 1;
+}
+
+#page-profile pre {
+    overflow: scroll;
+    ;
+}
+#page-profile ul {
+    text-align: left;
+}
+
+@media screen and (max-width: 900px){
+#page-profile {
+     position: static
+}
+#page-profile:hover {
+    opacity: 1;
+    
+}
+}
+#page-profile img{
+    height: 200px;
+    width: 150px;
+    margin: 25px;
+    border: 5px solid whitesmoke;
+    box-shadow: 0px 0px 0px 1px lightgrey;
+    border-radius: 50% 50%;
+    background-size: contain;
+    
+}
+
+
+@media screen and (max-width: 500px){
+    
+    #page-profile img{
+        width: 200px;
+        margin: 25px auto;
+        border: 5px solid whitesmoke;
+        box-shadow: 0px 0px 0px 1px lightgrey;
+        border-radius: 50% 50%;
+        background-size: contain;
+        
+    }
+}
+#page-profile ul{
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+#page-profile ul li {
+    display: block;
+    margin: 10px 0px;
+}
+
+#page-profile ul li:nth-child(1) span{
+    color: black;
+    
+}
+#page-profile ul li:nth-child(2) span{
+    color: blue;
+}
+
+#page-profile ul li:nth-child(3) span{
+    color: darkblue;
+}
+
+#page-profile ul li:nth-child(4) span{
+    color: deepskyblue;
+}
+
+#page-profile ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+#about {
+    padding: 10px;
+}
+
+#about hr {
+    color: hsl(174, 13%, 98%,0.2);
+    margin-right: 50px;
+    
+}
+
+@media (max-width: 1199px){
+    #about hr {
+        margin-right: auto;
+    }
+}
+#about b {
+    margin: 0px;
+    color: gray;
+    font-family: verdana;
+    
+}
+#pagination {
+   
+}
+
+#pagination li:nth-child(1) span{
+    color: black;
+}
+
+
+
+#pagination div {
+    padding: 10px 15px;
+    color: grey;
+    font-weight: bold;
+    
+    font-family: verdana;
+    border: thin solid grey;
+    
+    display: inline-block
+}
+#pagination div a {
+    text-decoration: none;
+    color: grey;
+}
+
+#pagination .prev {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: lightgray
+}
+#pagination .next {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#pagination div:nth-child(2){
+    background-color: grey;
+    color: whitesmoke;
+}
+
+#about-description {width: 800px;}
+
+@media screen and (max-width: 1242px){
+    
+#about-description {
+    width: 100%;
+    text-align: center;
+    }
+
+}
+#about-description h2 {
+    font-family: verdana;
+    
+    }
+#about-description h2:hover {
+    text-decoration: underline;
+}
+#about-description h2 a{
+    text-decoration: none;
+    color:#484848;
+}
+#about-description p {
+    
+    font-family: verdana;
+    
+}
+
+footer {
+    padding: 35px 35px 35px 70px;
+    border-top: 1px solid #bfbfbf;
+    background-color: #e6e6e6;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 500px){
+    footer {
+    padding: 10px;
+    }
+}
+
+footer p {
+    
+    margin: 0px;
+}
+footer ul {
+    margin: 0px;
+    padding: 0px;
+    font-family: verdana;
+    
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: black;
+}

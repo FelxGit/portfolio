@@ -1,0 +1,644 @@
+
+@font-face{
+	font-family: myfont;
+  	   src: url('../Raleway/Raleway-ExtraLight.ttf');
+}
+
+* {
+	box-sizing: border-box;
+}
+html {
+	margin: auto;
+
+}
+@media screen and (min-width: 2500px){
+	html {
+		width: 2500px;
+	}
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: myfont, verdana, Arial, helvetica;
+}
+
+  
+.pace .pace-progress {
+  background: transparent;
+  position: fixed;
+  z-index: 2000;
+  
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+
+/**Navbar Section**/
+.navbar {
+	height: auto;
+	width: 100%;
+	margin: ;
+    position: fixed;
+	top: 0px;
+    
+    z-index: 2;
+	border-radius: 0px;
+	background-color: rgb(34,34,34);
+}
+
+/*(updated)*/
+.nav li {
+    margin-right: 50px;
+}
+.navbar {
+    font-size: calc(12px + 1vw);
+}
+.navbar a {
+    color: darkgrey;
+}
+.navbar-brand{
+    color: darkgrey!important;
+    font-size: calc(20px + 1vw);
+
+}
+.navbar-nav {
+	margin-right: 20%;
+}
+
+
+
+/**Header Section**/
+
+header {
+	height: auto;
+	width: 100%;
+	margin: 0px;
+	padding: 10px;
+	color: beige;
+	background-color: royalblue; /* For browsers that do not support gradients */
+    background-color: #D82B48;
+	
+}
+header #greeting {
+    text-align: center;
+}
+#page-image img {
+    margin: 50px 0;
+    width: 256px;
+    border-radius: 50%;
+}
+header #services {
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+header #services h2 {
+    margin: 100px auto 50px auto;
+}
+header #services img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+header h2 {
+	margin-top: 0px;
+	padding: 0px;
+}
+#services #fa-throphy {
+    color: gold;
+    text-shadow: 2px 2px black;
+}
+/*(updated)*/
+header #greeting small{
+    font-size: calc(12px + 1vw);
+}
+
+#intro h2{
+    font-size: calc(20px + 1vw);
+}
+
+#intro h3 {
+    font-size: calc(12px + 1vw);
+}
+
+#services h2 {
+    font-size: calc(12px + 1vw);
+}
+
+#services .serve-header {
+    font-size: calc(12px + 1vw);    
+}
+#services p {
+    font-size: calc(12px + 0.5vw);
+}
+
+
+/*
+#page-image h2:after{
+  display:block;
+  content: '';
+  border-bottom: solid 1px white;  
+  transform: scaleX(.5);  
+  transition: transform 250ms ease-in-out;
+  opacity: .5;
+}
+*/
+
+
+/*mobile size/extra-small*/
+@media screen and (min-width: 1px) and (max-width: 700px){
+    
+    header {
+        padding-bottom: 100px;
+    }
+    header div{
+        margin-bottom: 50px;
+    }
+    header #intro {
+        margin-top: 50px;
+    }
+    header .glyphicon{
+        display: none;
+    }
+	header #greeting {
+		text-align: center;
+	}
+
+
+    
+}
+/*(updated)*/
+/* special break-point*/
+@media screen and (max-width: 350px){
+    #intro #page-image img{
+      width: 200px;   
+    }
+}
+
+/*(updated)*/
+/*Tablet size*/
+@media (min-width: 700px) and (max-width: 1199px){
+
+    header {
+        padding-bottom: 100px;
+    }
+    header div{
+        margin-bottom: 50px;
+    }
+    header #intro {
+        margin-top: 50px;
+    }
+    header #greeting {
+        font-weight: bolder;
+    }
+    header #greeting .glyphicon{
+        display: none;
+    }
+
+}
+
+/*medium size*/
+@media screen and (min-width:1200px) and (max-width: 2500px){
+    header {
+        padding-bottom: 500px;
+    }
+    header div{
+        margin-bottom: 50px;
+    }
+    header #intro {
+        margin-top: 50px;
+    }
+    header #greeting {
+        font-weight: bolder;
+    }
+    header .glyphicon{
+        display: none;
+    }
+    
+}
+
+
+#page-image {
+    height: auto;
+    width: auto;
+    margin-top: ;
+    display: block;
+    margin: auto;
+    text-align: center;   
+}
+
+
+
+/*About Section*/
+#about {
+    height: auto;
+    width: 100%;
+    padding: 5%;
+    margin: 0px;
+    text-align: center;
+    color: black;
+    font-weight: bold;    
+    background-color: white;
+    overflow: hidden;
+
+}
+
+#about div{
+    width: 50%;
+    float: left;
+    font-size: calc(12px + 0.5vw);
+    font-weight: lighter;
+}
+
+#about h1 {
+    margin: 5%;
+    font-size: calc(20px + 1vw;);
+}
+
+
+@media screen and (min-width: 1px) and (max-width: 1200px){
+    
+    #about div {
+        width: 100%;
+        clear: left;
+    }
+    
+}
+
+
+
+/**Portfolio Section***/
+#portfolio {
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 100px 0 100px 0;
+    text-align: center;
+    color: white;
+    background: linear-gradient(110deg, transparent 20%,brown 20%),url(../Images/bg2000.jpg);
+}
+
+
+#portfolio #portfolio-layout {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+#portfolio .portfolio-image{
+    margin: 3%
+}
+
+
+#portfolio img{
+    width: 256px;
+    border-radius: 50%;
+    overflow: hidden; 
+    box-shadow: 5px 10px 10px black;
+    opacity: 0.8;
+}
+
+#portfolio img:hover {
+    border-radius: 30px;
+    opacity: 1;
+    transition-duration: 0.5s;
+}    
+#portfolio .modal-body img{
+    border-radius: 0px;
+    
+        -webkit-animation-name: spin;
+        -webkit-animation-duration: 0.5s;
+
+        -moz-animation-name: spin;
+        -moz-animation-duration: 0.5s;
+        
+        -ms-animation-name: spin;
+        -ms-animation-duration: 0.5s;
+    
+        animation-name: spin;
+        animation-duration: 0.5s;
+    }
+    
+    @-ms-keyframes spin { 
+        from { 
+            -ms-transform: rotateX(-90deg); 
+        } to { 
+            -ms-transform: rotateX(0deg); 
+        }
+    }
+    @-moz-keyframes spin { 
+        from { 
+            -moz-transform: rotateX(-90deg); 
+        } to { 
+            -moz-transform: rotateX(0deg); 
+        }
+    }
+    @-webkit-keyframes spin { 
+        from { 
+            -webkit-transform: rotateX(-90deg); 
+        } to { 
+            -webkit-transform: rotateX(0deg); 
+        }
+    }
+    @keyframes spin { 
+        from { 
+            transform: rotateX(-90deg); 
+        } to { 
+            transform: rotateX(0deg); 
+        }
+    }
+    #portfolio h1{
+        font-size: calc(20px + 1vw);
+    }
+    #portfolio .modal{
+        max-width: 100%;    
+    }
+    #portfolio .close {
+        position: absolute;
+        top: 0px;
+        right: 5px;
+        color: crimson;
+        font-size: calc(24px + 1vw);
+    }
+    #portfolio .modal-header{
+        padding: 0px;
+    }
+    #portfolio .modal-title{
+        margin: auto;
+    }
+    #portfolio .modal-dialog{
+        max-width: 100%;
+    }
+    #portfolio .modal-content{
+        color: black;
+        max-width: 80%;
+        margin: auto;
+    }
+    #portfolio .modal-content img{
+        width: 60%;
+        opacity: 1;
+    }
+    #portfolio .modal-content h1,h4{
+        padding: 3%;
+        text-shadow: none;
+    }
+    
+    #portfolio h1,h2{
+        padding: 3%;
+    }
+    
+    #portfolio .modal-content p{
+        padding: 3%;
+        text-shadow: none;
+        font-size:;
+    }
+    #portfolio h2{
+        font-size: calc(12px + 1vw);
+    }
+    #portfolio .modal-body h1{
+        font-size: calc(12px + 0.5vw);
+    }
+    #portfolio .modal-header h4{
+        font-size: calc(12px + 1vw);
+    }
+    #portfolio .modal-content p{
+        font-size: calc(12px + 0.5vw);
+    }
+    #portfolio .modal-footer {
+        margin: 0px;
+        padding: 0px;
+    }
+    #portfolio .modal-footer .btn{
+        font-size: 1vw;
+        margin: auto;
+    }
+
+    #portfolio .modal-footer .btn:hover{
+        border-radius: 50%;
+    }
+
+
+    
+
+/**General MQ*/
+@media screen and (min-width: 1px) and (max-width: 1200px){
+    
+    #portfolio h1 {
+        text-shadow: 1px 1px black;
+    }
+    
+    #portfolio h2{
+        text-shadow: 1px 1px black;
+    }
+    
+    #portfolio .close {
+        position: absolute;
+        top: 0px;
+        right: 5px;
+        color: crimson;
+    }
+
+    #portfolio .modal-footer .btn{
+        font-size:;  
+    }
+}
+
+/*Mobile size*/
+@media screen and (min-width: 1px) and (max-width: 700px){
+    
+    #portfolio img{
+        border-radius: 30px;
+        opacity: 0.8;
+        transition-duration: 0.5s;
+    }
+    #portfolio img:hover{
+        opacity: 1;
+        text-shadow: none;
+   
+    }
+    
+    #portfolio .modal-content{
+        color: black;
+        max-width: 95%;
+        margin: auto;
+    }
+    #portfolio .modal-content img{
+        width: 100%;
+        margin: 25px 0 25px 0;
+        opacity: 1;
+    }
+}
+
+/*Tablet size*/
+@media screen and (min-width: 700px) and (max-width: 1200px){
+    
+    #portfolio #portfolio-layout{    
+        flex-direction: column;    
+    }
+    #portfolio .portfolio-image{
+        margin-top: 10%;
+        margin-bottom:  10%; 
+    }
+    #portfolio img{
+        width: 500px;
+    }
+    #portfolio .modal-content img{
+        width: 100%;
+        margin: 25px 0 25px 0;
+        opacity: 1;
+    }
+    #portfolio .modal-content p{
+       text-shadow: none;
+    }
+}
+
+
+/*Medium size*/
+@media screen and (min-width: 1200px) and (max-width: 2500px){
+    #portfolio img{
+        width: 300px;
+    }
+    #portfolio .modal-content p{
+        text-shadow: none;
+    }
+}
+
+
+
+#contact {
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 100px 0 100px 0;
+    background-origin: border-box;
+    border-top: 5px dashed grey;
+    border-bottom: 5px dashed grey;
+    
+}
+
+#contact h1 {
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#contact table {
+    width: 70%;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 30px;
+}
+
+
+#contact table input[type="text"],input[type="email"]{
+    height: 50px;
+    border: none;
+    font-size: calc(12px + 0.5vw);
+}
+
+
+#contact .form-control{
+    padding: 0px;
+    box-shadow: none;
+    border: none;
+    font-weight: bolder;
+        
+}
+#contact .btn{
+    height: auto;
+    font-size: calc(20px + 0.5vw);
+}
+
+#contact h1 {
+    font-size: calc(20px + 1vw);
+}
+
+/**For Mobile*/
+@media screen and (max-width: 1119px){
+    #contact table{
+        width: 100%;   
+    }
+    #contact .form-control{
+        text-align: center;
+    }
+}
+
+/**For Medium*/
+@media screen and (min-width: 1200px) and (max-width: 2500px){
+    #contact table{
+        width: 50%;    
+    }
+}
+
+
+footer {
+    height: auto;
+    width: 100%;
+    padding: 5%;
+    margin: 0px;
+    text-align: center;
+    
+    background-color: rgb(34,34,34);
+    color: gray;
+}
+
+footer #location {
+    
+}
+footer .fab {
+    margin: 10px 4px;
+}
+
+footer .btn-outline-light{
+    border-color: gray
+}
+footer ul {
+    margin: 0px;
+    padding: 0px;
+}
+footer #accounts .fab {
+    font-size: calc(12px + 0.5vw);
+}
+
+@media screen and (min-width: 1px) and (max-width: 350px){
+    
+    footer #accounts .fab {
+        margin: 8px 4px;
+        font-size: calc(8px);
+     }
+
+}
+
+@media screen and (min-width: 1px) and (max-width: 750px){
+    
+    footer #accounts .fab {
+        margin: 8px 4px;
+     }
+
+}
+
+@media screen and (min-width: 751px) and (max-width: 1200px){
+    
+    footer #accounts .fab {
+        margin: 8px 4px;
+    }
+
+}
+
+@media screen and (min-width: 1201px) and (max-width: 2500px){
+    
+    footer h4{
+        font-size: 2vw;
+    }
+    footer p {
+        font-size: 1.5vw;
+    }
+    footer #accounts .fab {
+        margin: 8px 4px;
+    }
+
+}

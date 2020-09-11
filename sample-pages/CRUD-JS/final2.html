@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body>
+      <div id="nav">
+              <div><button type="button" onclick="populate()">Populate</button></div>
+              <div><button type="button" onclick="Search()">Search</button></div>
+              <div><button type="button" onclick="Print()">Print</button></div>
+              <div><button type="button" onclick="Minimum()">Minimum</button></div>
+              <div><button type="button" onclick="Maximum()">Maximum</button></div>
+              <div><button type="button" onclick="Delet()">Delete</button></div>
+              <div><button type="button" onclick="Insert()">Insert</button></div>
+              <div><button type="button" onclick="Sort()">Sort</button></div>
+        </div>
+        <div id="Message"></div>
+        <div id="Content"></div>
+        <div id="style">
+    <script>
+        
+        
+        
+      var myarr = [];
+        var content ="";
+        var message = document.getElementById("Message");
+        var size = 10;
+        ///////////////
+    function populate(){
+        
+        size = 10;
+        var head = "Populate Array";
+        message.innerHTML = "";
+        
+        //random numbers..
+        for(a=0; a < size;a++){
+            myarr[a] = Math.floor((Math.random() * 100) + 1);
+        }
+        tmparr = myarr;
+        arrayOutput(head,myarr);
+        
+        
+    }
+        
+        //////////////////////
+     function Search(){
+        
+       if(myarr[0]!=undefined){
+           
+           var search = prompt("\nEnter number to search in array: ");
+           var head = "Search Array";
+           message = document.getElementById("Message");
+
+                var present=0;
+            for(a=0; a < size;a++){ 
+              if(myarr[a]==search){
+                  message.innerHTML = "\nThe number you are looking is present at index " + a;
+                  present++;
+              }
+            }
+             if(present==0){
+                 message.innerHTML = "\nCould not find number " + search +  "\n";
+             } 
+           
+       }else{
+           message.innerHTML = "Please populate the array."
+       }
+         
+     } 
+         
+     function Print(){
+                 
+        if(myarr[0]!=undefined){  
+         var head = "Print Array";
+
+             if(size>10){
+                 size = 10;
+             }
+
+
+           arrayOutput(head,myarr);
+             message.innerHTML = "";
+            
+        }else{
+            message.innerHTML = "Please populate the array.";
+        }
+    }
+    
+     
+    function Minimum(){
+        var min = myarr[0];
+        if(min!=undefined){
+            for(a=0;a<size;a++){
+                if(min>myarr[a]){
+                    min = myarr[a];
+                }
+            }
+
+            message.innerHTML =  "\nMinimum is: " + min + "\n";
+        }else{
+             message.innerHTML = "Please populate the array.";
+        }
+    }
+        
+    function Maximum(){
+        var max = myarr[0];
+        if(max!=undefined){
+        for(a=0;a<size;a++){
+            if(max<myarr[a]){
+                max = myarr[a];
+            }
+        }
+
+        message.innerHTML =  "\nMaximum is: " + max + "\n";
+        }else{
+            message.innerHTML = "Please populate the array.";
+        }
+    }    
+        
+   var tmparr = [];
+        if(size >= 10){tmparr = myarr;}
+        
+   function Delet(){
+       
+       if(myarr[0]){
+            var head = "Delete Array";
+            var del = prompt("Enter element/value to be deleted : ");
+            var count =0;
+
+            for(i=0; i<size; i++){
+                if(myarr[i]==del){
+                    for(j=i; j<(size-1); j++){
+                        myarr[j]=myarr[j+1];
+                    }
+                    count++;
+                    size--;
+                    break;
+                }
+            }
+            if(count==0){
+                 message.innerHTML = "Element not found..!!";
+            }
+            else{
+                 message.innerHTML = "Element deleted successfully..!!\n";
+                arrayOutput(head,myarr);
+            }
+
+
+       }else{
+           message.innerHTML = "Please populate the array.";
+       }
+    }
+        
+    function Insert(){
+        if(myarr[0]){
+           var insert,pos;
+           var head = "Insert Array";
+                insert = prompt("Enter element to be insert : ");
+                pos = prompt("At which position (Enter index number) ? ");
+                if(insert){
+                size++;
+
+                if(pos<size && pos >=0){ 
+
+                for(a=size; a>pos; a--)
+                {
+                    myarr[a]=myarr[a-1];
+                }
+                myarr[pos]=insert;
+                message.innerHTML = "Element inserted successfully..!!\n";
+                message.innerHTML = "Now the array is : \n\n";
+                    arrayOutput(head, myarr);
+
+                }else{
+                    message.innerHTML = "Position out of range.\n\n";
+                }
+                }else{message.innerHTML = "One of the filled bar is empty\n";}
+
+        }else{
+            message.innerHTML = "Please populate the array.";
+        }
+    }
+ 
+    function Sort(){
+            if(myarr[0]){
+                 var done = false;
+                 var head = "Array Sort";
+                
+              while (!done){
+                  
+                done = true;
+                for (i = 1; i < size; i++) {
+                  if (myarr[i - 1] > myarr[i]) {
+                    done = false;
+
+                    var tmp = myarr[i-1];
+                    myarr[i - 1] = myarr[i];
+                    myarr[i] = tmp;
+                  }
+                }
+              }
+                arrayOutput(head,myarr);
+        }else{
+            message.innerHTML = "Please popualte the array.";
+        }
+    }        
+	function arrayOutput(heading, myarray){
+	           content+=
+                "<h2>" + heading + "</h2>" + 
+                "<table border='1'>" +
+			    "<thead><tr><th>Index</th><th>Value</th></tr></thead><tbody>";
+			
+			for(a=0;a<size;a++){
+			   content+="<tr><td>" + a + "</td><td>" +
+			   myarray[a] + "</td>";
+			}
+			   content+= "</tr></tbody></table>";
+        
+        document.getElementById("Content").innerHTML = content;
+        content = "";
+			
+	}
+     
+    </script>
+        </div>
+    </body>
+</html>

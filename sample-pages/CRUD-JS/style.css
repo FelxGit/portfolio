@@ -1,0 +1,37 @@
+body{
+    margin: 0px;
+    text-align: center;
+}
+#nav {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0px;
+    background-color: black;
+    display: flex;
+    flex-flow: row no-wrap;
+    justify-content: center;
+}
+#nav div{
+   
+    
+   }
+#nav div button {
+    height: 50px;
+    width: 100px
+}
+
+#style {
+  color: red;
+}
+table {
+    border: none;
+    margin: auto;
+    font-size: 20px;
+    border-spacing: 10px;
+    
+}
+table td,th{
+    border: none;
+    border-bottom: thin solid grey
+}

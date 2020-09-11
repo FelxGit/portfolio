@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <style>
+         div {
+             height: auto;
+             width: 40%;
+             padding: 1%;
+             margin: auto;
+             font-family: sans-serif, arial;
+             font-weight: bold;
+             font-size: 2.5vh;
+             border-radius: 5px;
+             border: thin solid grey;
+         }
+         div table{
+             height: auto;
+             width: 100%;
+         }
+         input[type="text"] {
+             height: 40px;
+             width: 100%;
+         }
+         div select {
+             height: 40px;
+             width: 100%;
+         }
+         
+         input[type="submit"]{
+             height: 30px;
+             width: 100px;
+         }
+     
+     </style>
+ </head>
+ <body>
+        <div name="forms">
+          <table>
+          <tr>
+              <th>Unit Converter</th>
+          </tr>
+          <tr>
+             <td>
+               <select id="unit">
+                  <option selected="selected">Kilometer</option>
+                  <option>Meter</option>
+                  <option>Decimeter</option>
+                  <option>Centimeter</option>
+                  <option>Millimeter</option>
+               </select>
+             </td>
+             <td>
+               <input id="unitnum" type="text" placeholder="Enter a value.."/>
+             </td>
+          </tr>
+          <tr>
+             <td>KM</td>
+             <td><input id="km" type="text" value="" disabled/></td>
+          </tr>
+          <tr>
+             <td>M</td>
+             <td><input id="m"  type="text" value="" disabled/></td>
+          </tr>
+          <tr>
+             <td>DM</td>
+             <td><input id="dm" type="text" value="" disabled/></td>
+          </tr>
+          <tr>
+             <td>CM</td>
+             <td><input id="cm" type="text" value="" disabled/></td>
+          </tr>
+          <tr>
+             <td>MM</td>
+             <td><input id="mm" type="text" value="" disabled/></td>
+          </tr>
+              
+          <tr>
+             <td><input type="submit" onclick="converter()" value="Submit" /></td>
+          </tr>
+              
+          </table>  
+            
+        </div>
+     
+     <script>
+        
+           function converter(){
+               meter();
+               kilometer();
+               decimeter();
+               centimeter();
+               millimeter();
+           }
+           function variable(){
+               
+               this.unitstring = document.getElementById('unit').value;
+               this.unitnum = document.getElementById('unitnum').value;
+               
+              
+               this.getkm;
+               this.getm;
+               this.getdm;
+               this.getcm;
+               this.getmm;
+               
+              
+           }
+           
+          
+           function kilometer(){
+               
+           var obj = new variable();
+               if(obj.unitstring=="Kilometer"){
+                  
+              //kilometer - other units
+               obj.km = parseFloat(obj.unitnum);
+               obj.m = parseFloat(obj.unitnum)*1000;
+               obj.dm = parseFloat(obj.unitnum)*10000;
+               obj.cm = parseFloat(obj.unitnum)/0.000010000;
+               obj.mm = parseFloat(obj.unitnum)*1e+6;
+                   
+                
+                  document.getElementById('m').value = obj.m;
+                  document.getElementById('km').value = obj.km;
+                  document.getElementById('dm').value = obj.dm;
+                  document.getElementById('cm').value = obj.cm;
+                  document.getElementById('mm').value = obj.mm;
+                   
+               }
+           }
+               
+           function meter(){
+             
+           var obj = new variable();
+               if(obj.unitstring=="Meter"){
+                    //meter - other units
+               obj.km = parseFloat(obj.unitnum)/1000;
+               obj.m = parseFloat(obj.unitnum);
+               obj.dm = parseFloat(obj.unitnum)/0.10000;
+               obj.cm = parseFloat(obj.unitnum)/0.01;
+               obj.mm = parseFloat(obj.unitnum)/0.0010000;
+                   
+                   document.getElementById('m').value = obj.m;
+                  document.getElementById('km').value = obj.km;
+                  document.getElementById('dm').value = obj.dm;
+                  document.getElementById('cm').value = obj.cm;
+                  document.getElementById('mm').value = obj.mm;
+                   
+               }
+               
+           }
+           
+           function decimeter(){
+               
+           var obj = new variable();
+              if(obj.unitstring=="Decimeter"){
+               //decimeter - other units
+               obj.km =parseFloat(obj.unitnum)/0.0001;
+               obj.m = parseFloat(obj.unitnum)*0.1;
+               obj.dm = parseFloat(obj.unitnum);
+               obj.cm = parseFloat(obj.unitnum)*10;
+               obj.mm = parseFloat(obj.unitnum)*100;   
+               
+                  document.getElementById('m').value = obj.m;
+                  document.getElementById('km').value = obj.km;
+                  document.getElementById('dm').value = obj.dm;
+                  document.getElementById('cm').value = obj.cm;
+                  document.getElementById('mm').value = obj.mm;
+              }
+           }
+         
+          function centimeter(){
+              
+           var obj = new variable();
+              if(obj.unitstring=="Centimeter"){
+                  //centimeter - other units
+               obj.km = parseFloat(obj.unitnum)*0.00001;
+               obj.m = parseFloat(obj.unitnum)* 0.01;
+               obj.dm = parseFloat(obj.unitnum)*0.1;
+               obj.cm = parseFloat(obj.unitnum)*0.01;
+               obj.mm = parseFloat(obj.unitnum)*10;
+              
+                   document.getElementById('m').value = obj.m;
+                  document.getElementById('km').value = obj.km;
+                  document.getElementById('dm').value = obj.dm;
+                  document.getElementById('cm').value = obj.cm;
+                  document.getElementById('mm').value = obj.mm;
+              }
+          }
+         
+          function millimeter(){
+              
+           var obj = new variable();
+              if(obj.unitstring=="Millimeter"){
+                 //mellimeter - other units
+               obj.km = parseFloat(obj.unitnum)*0.000001;
+               obj.m = parseFloat(obj.unitnum)* 0.001;
+               obj.dm = parseFloat(obj.unitnum)*0.01;
+               obj.cm = parseFloat(obj.unitnum)*0.01;
+               obj.mm = parseFloat(obj.unitnum);
+                  
+                  document.getElementById('m').value = obj.m;
+                  document.getElementById('km').value = obj.km;
+                  document.getElementById('dm').value = obj.dm;
+                  document.getElementById('cm').value = obj.cm;
+                  document.getElementById('mm').value = obj.mm;
+          }
+          }
+     </script>
+ </body>
+</html>

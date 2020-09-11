@@ -1,0 +1,97 @@
+<html>
+  <head>
+     <style>
+	     *{box-sizing: border-box}
+		 body{
+		    margin: 0px;
+			font-family: verdana, arial;
+		 }
+		 table {margin: auto;}
+	     input[type="text"]{
+		     width: 100%;
+			 height: 50px;
+			 font-size: 30px;
+		 }
+	     input[type="button"] {
+		     width: 100px;
+			 height: 50px;
+			 font-size: 20px;
+		 }
+	 </style>
+     <script>
+	 
+	 var myvar = "";
+	 
+	   
+        function addUp(myvalue){
+		 
+		 
+		    if(myvalue=="+" || myvalue=="-" || myvalue=="*" || myvalue=="/" || myvalue=="%"){
+			   myvar += myvalue;
+			      document.getElementById("textbox").value = myvalue;
+			}
+			else{
+			   myvar += myvalue;
+			      document.getElementById("textbox").value += myvalue;
+			}
+		  
+		  
+        }
+        function calculate(){ 
+           try{  //check if eval(which is a built-in function) have error operating
+              reset(eval(myvar)) 
+           } 
+           catch(e){
+              reset("Error");
+           } 
+		   
+        } 
+        function del(){
+		   myvar = myvar.substring(0,myvar.length-1);
+		   document.getElementById("textbox").value = myvar;
+		}		
+	    function reset(myvalue){
+           document.getElementById("textbox").value= myvalue;
+		   myvar = myvalue.toString();
+		   
+        }
+	 </script>
+  </head>
+  <body>
+  <table>
+      <tr><th colspan="4"><h2>Simple Calculator<h2></th></tr>
+	  <tr><th colspan="4"><input type="text" id="textbox" readonly/></th></tr>
+	  <tr>
+		<td><input type="button" value="7" onclick='addUp("7")'></td>
+		<td><input type="button" value="8" onclick='addUp("8")'></td>
+		<td><input type="button" value="9" onclick='addUp("9")'></td>
+		<td><input type="button" value="*" onclick='addUp("*")'></td>
+	  </tr>
+	  <tr>
+		<td><input type="button" value="4" onclick='addUp("4")'></td>
+		<td><input type="button" value="5" onclick='addUp("5")'></td>
+		<td><input type="button" value="6" onclick='addUp("6")'></td>
+		<td><input type="button" value="-" onclick='addUp("-")'></td>
+	  </tr>
+	  <tr>
+		<td><input type="button" value="1" onclick='addUp("1")'></td>
+		<td><input type="button" value="2" onclick='addUp("2")'></td>
+		<td><input type="button" value="3" onclick='addUp("3")'></td>
+		<td><input type="button" value="+" onclick='addUp("+")'></td>
+	  </tr>
+	  <tr>
+		<td><input type="button" value="0" onclick='addUp("0")'></td>
+		<td><input type="button" value="." onclick='addUp(".")'></td>
+		<td><input type="button" value="%" onclick='addUp("%")'></td>
+		<td><input type="button" value="/" onclick='addUp("/")'></td>
+	 </tr>
+	 <tr>
+	    <td><input type="button" value="<--" onclick='del()'></td>
+		<td><input type="button" value="Clear" onclick='reset("")'></td>
+		<td colspan="2"><input type="button" value="=" style="width: 100%" onclick='calculate()'></td>
+	  </tr>
+  </table>
+
+
+</body>
+</html>

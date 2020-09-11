@@ -1,0 +1,328 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+@font-face {
+    font-family: 'myfont';
+    src: url(Raleway/Raleway-ExtraLight.ttf);
+}
+.navbar-inverse {
+    width: 100%!important;
+    padding-left: 10%!important;
+    padding-right: 10%!important;
+    margin: 0px!important;
+    position: fixed!important;
+    top: 0px!important;
+    font-family: 'myfont'!important;
+    font-size: 2.5vh!important;
+    border-radius: 0!important;
+    z-index: 9999;
+    
+}
+
+header {
+    height: 105%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10%; 10% 0px 10%;
+    margin: 0px;
+    background: url(Images/colortheory.jpg) repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'myfont';
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+header #page-header {
+    font-size: 2.5vh;
+}
+
+header #page-header .header-text {
+    margin: 0px;
+    font-size: 5vh;
+}
+
+header #page-img img{
+    width: 100%;
+    height: auto;
+}
+
+#page-intro{
+    height: auto;
+    width: 100%;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-family: 'myfont';
+    font-size: 2.5vh;
+}
+
+
+.page-profile{
+          height: auto;
+          width: 50%;
+          padding-right: 1%;
+    
+          
+}
+.page-profile .text-intro {
+    font-size: 3vh;
+}
+
+.page-profile section{
+    color: lightgray;
+}
+
+.page-profile ul {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+.page-profile ul li {
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    font-size: 4.5vh;
+    vertical-align: middle;
+}
+.page-profile .tools ul img{
+    height: 100%;
+    width: 100%;
+}
+.intro-img {
+    width: 50%;
+    height: auto;
+}
+.intro-img img{
+    width: 100%;
+}
+.tools ul li:nth-child(odd){
+ color: darkblue;   
+}
+
+.tools ul li:nth-child(even){
+ color: red;   
+}
+
+hr {border: 0.5px solid lightgrey;}
+
+.coffee {
+    height: auto;
+    width: 100%;
+    margin-top: 100px ;
+    text-align: center;
+    font-family: 'myfont'
+}
+
+.coffee span:nth-child(1) {
+    margin: 20px;
+    color: black;    
+    font-size: 7vh;
+    display: block;
+}
+
+.coffee span:nth-child(2) {
+    margin: 20px;
+    color: black;    
+    font-size: 4vh;
+    display: inline-block;
+}
+
+.coffee span:nth-child(2):after {
+    content: '';
+    margin-top: 20px;
+    display: block;
+    border-bottom: 5px solid orange;
+    transform: scale(0.3);
+}
+
+#service {
+    height: auto;
+    width: 100%;
+    padding: 0px 10% 10% 10%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    font-family: 'myfont';
+    font-size: 3vh;
+    text-align: center;
+    
+}
+
+#service img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+#work-parent {
+       height: auto;
+       width: 100%;
+       padding: 10%;
+       margin: 0px;
+       font-family: 'myfont';
+       font-size: 2.5vh;
+       text-align: center;
+    background: #f2f2f2
+
+}
+
+#work-parent .rocket-logo i{
+     display: block;
+    font-size: 8vh;
+}
+
+.rocket-logo h3 {
+    display: inline-block;
+    font-size: 5vh;
+    font-weight: lighter
+}
+
+#work-parent .rocket-logo h3:after {
+    content: '';
+    display: block;
+    border-bottom: 10px solid orange;
+    transform: scale(0.5);
+    padding-top: 100px
+    
+}
+#work {
+       
+       display: flex;
+       flex-wrap: nowrap;
+       justify-content: center;
+      
+}
+.description {
+    height: auto;
+    width: 50%;
+    padding: 0px;
+    margin-right: 1%;   
+}
+
+
+.description .secbig {
+    font-size: 4vh;
+}
+#work .external {
+    height: auto;
+    width: 50%;
+    padding: 0px;
+    display: flex;
+    flex-flow: column;
+
+}
+
+.external .fa {
+    
+    font-size: 10vh;
+    margin-bottom: 50px;
+    color: orange;
+    transition: color 1s linear 2s
+}
+
+.external a:hover {
+    color: black;
+    text-decoration: none;
+}
+.external a {
+    text-decoration: none;
+    
+}
+
+footer {
+    height: auto;
+    width: 100%;
+    padding: 4%;
+    margin:0px;
+    font-family: 'myfont';
+    font-size: 2.5vh;
+    color: dimgray;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    
+    background-color: #363942
+}
+footer .fa-tachometer {
+    font-size: 7vh;
+}
+footer .list{
+    display: block;
+    margin-top: 2em;
+    color: goldenrod;
+}
+.list div{
+    display: inline-block;
+    margin-left: 2%;
+}
+
+footer .logo{
+    color: dimgray;
+    margin-top: 0.5em;
+    font-size: 7.5vh;
+}
+footer .logo a {
+    margin-left: 3%;
+    text-decoration: none;
+    color: dimgray;
+    transition: color;
+    transition-duration: .5s;
+    transition-delay: 1.5s;
+}
+
+footer .logo a:hover {
+    color: goldenrod;
+}
+
+
+@media (max-width: 850px){
+    #page-intro{
+        flex-flow: column;
+        justify-content:center;
+    }
+    .page-profile{
+        width: 100%;
+        
+    }
+    
+    .intro-img {
+        margin: 0px;
+        width: 100%;
+    }
+    .intro-img img {
+        width 100%;
+    }
+    
+    /**/
+    
+    #service {
+        flex-flow: column;
+    }
+    
+    #work {
+        flex-flow: column;
+    }
+    
+    .description{
+        width: 100%;
+    }
+    
+    .external {
+        width: 100%;
+        margin-left: 25%;
+            
+    }
+    
+}
+   
+
+
