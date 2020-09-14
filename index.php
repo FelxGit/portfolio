@@ -183,7 +183,7 @@
                           <img src="Images/encyclopedia.png">
                           <br/><br/><br/>
                           <p>This project was made from a book Encyclopedia of Animals. All the images here are filtered free to use and modified. Only I did was weld the application with clean intent :) .</p>
-                          <a href="https://fayl001.github.io/webproject2018/School%20Project/index.html"  target="_blank">Link here</a><br/>
+                          <a href="https://felxgit.github.io/webproject2018/School%20Project/index.html"  target="_blank">Link here</a><br/>
                           <b><i>Date: </i></b>
                         </div>
                       <hr/>
@@ -192,7 +192,7 @@
                           <img src="Images/ency2.png">
                           <br/><br/><br/>
                           <p>The only possible reason for this is to test my ability without bootstrap.</p>
-                          <a href="https://fayl001.github.io/ency2.html"  target="_blank">Link here</a>
+                          <a href="https://felxgit.github.io/ency2.html"  target="_blank">Link here</a>
                         </div>
                         
                     </div>
@@ -266,7 +266,7 @@
                         <h1>Building Practices</h1>
                         <img src="Images/replica.png">
                         <p>This includes replicating other websites for educational purpose only.<br/><br/><br/>
-                            <a href="https://fayl001.github.io/practica/"  target="_blank">Link here</a>
+                            <a href="https://felxgit.github.io/practica/"  target="_blank">Link here</a>
                         </p>
 
                         <p>Replica from Aakash Japish.<br/><br/><br/>
@@ -376,7 +376,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social rounded-circle" href="https://github.com/fayl001">
+                <a class="btn btn-outline-light btn-social rounded-circle" href="https://github.com/felxgit">
                   <i class="fab fa-fw fa-github"></i>
                 </a>
               </li>
