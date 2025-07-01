@@ -83,20 +83,19 @@ header {
 header #greeting {
     text-align: center;
 }
-#page-image img {
-    margin: 50px 0;
-    width: 256px;
-    border-radius: 50%;
+.profile-image, .profile-text {
+    margin: auto!important;
+    text-align: center
 }
-header #services {
+header .services {
     height: auto;
     width: 100%;
     text-align: center;
 }
-header #services h2 {
+header .services h2 {
     margin: 100px auto 50px auto;
 }
-header #services img{
+header .services img{
     width: 140px;
     height: 140px;
     border-radius: 50%;
@@ -105,7 +104,7 @@ header h2 {
 	margin-top: 0px;
 	padding: 0px;
 }
-#services #fa-throphy {
+.services #fa-throphy {
     color: gold;
     text-shadow: 2px 2px black;
 }
@@ -122,14 +121,16 @@ header #greeting small{
     font-size: calc(12px + 1vw);
 }
 
-#services h2 {
+.services h2 {
     font-size: calc(12px + 1vw);
 }
 
-#services .serve-header {
-    font-size: calc(12px + 1vw);    
+.serve-header {
+    font-size: calc(12px + 1vw);
+    color: lightblue;
+    font-weight: bolder;
 }
-#services p {
+.services p {
     font-size: calc(12px + 0.5vw);
 }
 
@@ -641,4 +642,26 @@ footer #accounts .fab {
         margin: 8px 4px;
     }
 
+}
+
+.shape-outer {
+    display: flex;
+    flex-shrink: 0;
+    height: calc(150px + 4vw);
+    width: calc(150px + 4vw);
+    margin: 25px;
+    background-image: linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
+}
+
+.shape-inner {	
+    height: calc(130px + 4vw);
+    width: calc(130px + 4vw);
+    background: url(../Images/profile.jpg) no-repeat center;
+    background-size: cover;
+    margin: auto;
+}
+
+.heptagon {
+    -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 62%, 75% 100%, 25% 100%, 0% 62%, 10% 20%);
+    		clip-path: polygon(50% 0%, 90% 20%, 100% 62%, 75% 100%, 25% 100%, 0% 62%, 10% 20%);
 }
