@@ -80,13 +80,19 @@ header {
     background-color: #D82B48;
 	
 }
-header #greeting {
+header .greeting {
     text-align: center;
 }
-.profile-image, .profile-text {
-    margin: auto!important;
-    text-align: center
+.profile-image img {
+    margin: 50px 0;
+    width: 256px;
+    border-radius: 50%;
 }
+
+.profile-text {
+    text-align: center;
+}
+
 header .services {
     height: auto;
     width: 100%;
@@ -109,7 +115,7 @@ header h2 {
     text-shadow: 2px 2px black;
 }
 /*(updated)*/
-header #greeting small{
+header .greeting small{
     font-size: calc(12px + 1vw);
 }
 
@@ -120,6 +126,7 @@ header #greeting small{
 #intro h3 {
     font-size: calc(12px + 1vw);
 }
+
 
 .services h2 {
     font-size: calc(12px + 1vw);
@@ -134,9 +141,8 @@ header #greeting small{
     font-size: calc(12px + 0.5vw);
 }
 
-
 /*
-#page-image h2:after{
+.profile-image h2:after{
   display:block;
   content: '';
   border-bottom: solid 1px white;  
@@ -162,7 +168,7 @@ header #greeting small{
     header .glyphicon{
         display: none;
     }
-	header #greeting {
+	header .greeting {
 		text-align: center;
 	}
 
@@ -172,7 +178,7 @@ header #greeting small{
 /*(updated)*/
 /* special break-point*/
 @media screen and (max-width: 350px){
-    #intro #page-image img{
+    #intro .profile-image img{
       width: 200px;   
     }
 }
@@ -190,10 +196,10 @@ header #greeting small{
     header #intro {
         margin-top: 50px;
     }
-    header #greeting {
+    header .greeting {
         font-weight: bolder;
     }
-    header #greeting .glyphicon{
+    header .greeting .glyphicon{
         display: none;
     }
 
@@ -210,7 +216,7 @@ header #greeting small{
     header #intro {
         margin-top: 50px;
     }
-    header #greeting {
+    header .greeting {
         font-weight: bolder;
     }
     header .glyphicon{
@@ -220,7 +226,7 @@ header #greeting small{
 }
 
 
-#page-image {
+.profile-image {
     height: auto;
     width: auto;
     margin-top: ;
@@ -642,26 +648,4 @@ footer #accounts .fab {
         margin: 8px 4px;
     }
 
-}
-
-.shape-outer {
-    display: flex;
-    flex-shrink: 0;
-    height: calc(150px + 4vw);
-    width: calc(150px + 4vw);
-    margin: 25px;
-    background-image: linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
-}
-
-.shape-inner {	
-    height: calc(130px + 4vw);
-    width: calc(130px + 4vw);
-    background: url(../Images/profile.jpg) no-repeat center;
-    background-size: cover;
-    margin: auto;
-}
-
-.heptagon {
-    -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 62%, 75% 100%, 25% 100%, 0% 62%, 10% 20%);
-    		clip-path: polygon(50% 0%, 90% 20%, 100% 62%, 75% 100%, 25% 100%, 0% 62%, 10% 20%);
 }
