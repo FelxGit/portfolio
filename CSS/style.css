@@ -390,6 +390,13 @@ header .greeting small{
         width: 100%;
         opacity: 1;
     }
+    
+    #portfolio .modal-content .sm-img{
+        width: 300px!important;
+        height: auto!important;
+        margin:auto;
+    }
+    
     #portfolio .modal-content h1,h4{
         padding: 3%;
         text-shadow: none;
@@ -478,6 +485,13 @@ header .greeting small{
         width: 100%;
         margin: 25px 0 25px 0;
         opacity: 1;
+        max-height: 500px;
+    }
+    
+    #portfolio .modal-content .sm-img{
+        width: 250px!important;
+        height: auto!important;
+        margin:auto;
     }
 }
 
@@ -681,4 +695,8 @@ footer #accounts .fab {
 
     border-radius: 999px;
     box-shadow: 0 0 12px rgba(0,198,255,0.5);
+}
+
+.carousel-inner {
+    background: black;
 }
