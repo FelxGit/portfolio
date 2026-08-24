@@ -700,3 +700,136 @@ footer #accounts .fab {
 .carousel-inner {
     background: black;
 }
+
+
+/**Experience Section***/
+#experience {
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 100px 5% 100px 5%;
+    text-align: center;
+    color: white;
+    background-color: #1f1f2e;
+    overflow: hidden;
+}
+
+#experience h1 {
+    margin-bottom: 5%;
+    font-size: calc(20px + 1vw);
+}
+
+.ai-indicator {
+    margin: 0 0 4% 0;
+    font-size: calc(9px + 0.3vw);
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 1px;
+}
+
+.experience-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
+}
+
+.experience-card {
+    width: 45%;
+    min-width: 300px;
+    margin-bottom: 3%;
+    text-align: left;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.12));
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 35px rgba(0,198,255,0.35);
+}
+
+.experience-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 25px;
+    background: linear-gradient(110deg, #D82B48, #7a1230);
+}
+
+.experience-card-header .serve-header {
+    margin: 0;
+    color: white;
+    font-size: calc(14px + 0.6vw);
+}
+
+.experience-period {
+    font-size: calc(10px + 0.4vw);
+    color: #ffe;
+    opacity: 0.85;
+}
+
+.experience-card-body {
+    padding: 25px;
+}
+
+.experience-field {
+    margin-bottom: 18px;
+}
+
+.experience-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bolder;
+    color: #00c6ff;
+    font-size: calc(11px + 0.4vw);
+}
+
+.experience-field a {
+    color: #ffd;
+    word-break: break-all;
+    font-size: calc(11px + 0.4vw);
+}
+
+.experience-field p {
+    margin: 0;
+    font-size: calc(11px + 0.4vw);
+    line-height: 1.5;
+}
+
+.experience-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge-lang {
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: rgba(0,198,255,0.15);
+    border: 1px solid rgba(0,198,255,0.5);
+    color: #aef1ff;
+    font-size: calc(9px + 0.4vw);
+    font-weight: bold;
+}
+
+.experience-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-list li {
+    margin-bottom: 6px;
+    font-size: calc(11px + 0.4vw);
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 1199px){
+    .experience-card {
+        width: 90%;
+    }
+}
