@@ -398,16 +398,10 @@ header .greeting small{
     }
     
     #portfolio .modal-content h1,h4{
-        padding: 3%;
         text-shadow: none;
     }
     
-    #portfolio h1,h2{
-        padding: 3%;
-    }
-    
     #portfolio .modal-content p{
-        padding: 3%;
         text-shadow: none;
         font-size:;
     }
