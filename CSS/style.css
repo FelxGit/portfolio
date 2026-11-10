@@ -124,7 +124,7 @@ header .greeting small{
 }
 
 #intro h3 {
-    font-size: calc(12px + 1vw);
+    font-size: calc(10px + 0.7vw);
 }
 
 
